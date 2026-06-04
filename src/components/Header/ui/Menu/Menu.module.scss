@@ -1,0 +1,10 @@
+.item {
+  color: black;
+  padding: 8px;
+  letter-spacing: 1px;
+
+  &:hover {
+    transition: all .5s ease;
+    border-bottom: 1px solid black;
+  }
+}

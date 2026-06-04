@@ -1,0 +1,14 @@
+// Цвета
+$primaryBg: rgb(6 49 131 / 2%);
+$secondaryBg: rgb(6 49 131 / 40%);
+$accent: rgb(6 49 131 / 55%);
+$black: rgb(0 0 0 / 100%);
+$white: rgb(255 255 255);
+
+// Градиенты
+$linearGradient: linear-gradient(25deg, rgb(6 49 131 / 10%) 70%, rgb(6 49 131 / 40%));
+
+// Медиа-запросы
+$mobile: 520px;
+$tablet: (max-width: 768px);
+$desktop: (max-width: 925px);
