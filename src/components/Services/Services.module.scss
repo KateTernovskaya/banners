@@ -1,0 +1,16 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/mixin";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vh;
+}
+
+.service {
+  background: $linearGradient;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

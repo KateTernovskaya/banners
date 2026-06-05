@@ -1,18 +1,18 @@
 export const itemsMenu = [
   {
-    title: 'About',
-    href: 'about',
+    title: 'Услуги',
+    href: 'services',
   },
   {
-    title: 'Projects',
-    href: 'projects',
+    title: 'На карте',
+    href: 'map',
   },
   {
-    title: 'Skills',
-    href: 'skills',
+    title: 'Цены',
+    href: 'cost',
   },
   {
-    title: 'Contacts',
+    title: 'Контакты',
     href: 'contacts',
   },
 ];

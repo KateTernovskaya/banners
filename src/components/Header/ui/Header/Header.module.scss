@@ -1,29 +1,39 @@
 @import '../../../../shared/styles/variables';
 
 .container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 10vh;
+  z-index: 1000;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+
+  // position: relative;
   background: $linearGradient;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: $mobile) {
-    svg {
-      width: 120px;
-      height: 100px;
-    }
-  }
+  // @media (max-width: $mobile) {
+  //  svg {
+  //    width: 120px;
+  //    height: 100px;
+  //  }
+  // }
 }
 
 .wrapper {
-  max-width: 1170px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 10vw;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.list {
+.menu_wrapper ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 3vw;
 }
