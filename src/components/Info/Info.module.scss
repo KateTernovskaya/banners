@@ -2,20 +2,23 @@
 @import "../../shared/styles/mixin";
 
 .container {
+}
+
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .text_wrapper {
-  width: 70%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 5vh;
 }
 
 .title {
-  @include font($accent, 600, 1.5, 20px, 30px);
+  @include font($accent, 600, 1.5, 14px, 24px);
   text-transform: uppercase;
   letter-spacing: 2px;
 }

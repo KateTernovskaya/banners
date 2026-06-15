@@ -4,7 +4,7 @@ export const itemsMenu = [
     href: 'services',
   },
   {
-    title: 'На карте',
+    title: 'Локации',
     href: 'map',
   },
   {

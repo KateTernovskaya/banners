@@ -17,7 +17,10 @@ const Menu = ({ onClick }: MenuProps) => {
               className={styles.item}
               onClick={onClick}
               to={item.href}
-              smooth={true}
+              smooth={'easeInOutCubic'}
+              duration={500}
+              offset={-100}
+              spy={true}
             >
               {item.title}
             </Link>
