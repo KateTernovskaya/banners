@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll, Link } from 'react-scroll';
 import Menu from '../Menu';
 
 const Header: React.FC = () => {
@@ -20,7 +20,11 @@ const Header: React.FC = () => {
         {/*<Logo fill={'rgba(6,49,131,0.5)'} />*/}
         <a
           onClick={() => {
-            scroll.scrollToTop();
+            scroll.scrollTo(0, {
+              duration: 500,
+              smooth: 'easeInOutCubic',
+              containerId: 'main',
+            });
           }}
         >
           НАЗВАНИЕ
