@@ -1,0 +1,40 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/mixin";
+
+
+.container {
+  background: $linearGradient;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 3vh;
+  border-radius: 4px;
+
+  svg {
+    width: 50px;
+    height: 50px;
+
+    path {
+      fill: $accent;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.button {
+  background-color: $accent;
+  color: $white;
+  padding: 1.3vh;
+  border-radius: 4px;
+  transition: all ease 0.3s;
+
+  &:hover {
+    background-color: $secondaryBg;
+  }
+}

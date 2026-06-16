@@ -1,0 +1,22 @@
+import React from 'react';
+import styles from './ServicesCard.module.scss';
+import type { ServicesCardProps } from './types';
+
+const ServicesCard = ({ svg, name, description }: ServicesCardProps) => {
+  const Icon = svg;
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.title}>
+        <Icon />
+        <h3>{name}</h3>
+      </div>
+
+      <p>{description}</p>
+
+      <button className={styles.button}>Подробнее</button>
+    </div>
+  );
+};
+
+export default ServicesCard;
