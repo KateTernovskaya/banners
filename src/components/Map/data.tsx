@@ -1,5 +1,10 @@
 import { TLocations } from './types';
 import img1 from '../../shared/assets/images/brandmauer-1.jpg';
+import neftyanikov1 from '../../shared/assets/images/neftyanikov-2/neftyanikov-2-1.jpg';
+import neftyanikov2 from '../../shared/assets/images/neftyanikov-2/neftyanikov-2-2.jpg';
+import neftyanikov3 from '../../shared/assets/images/neftyanikov-2/neftyanikov-2-3.jpg';
+import neftyanikov4 from '../../shared/assets/images/neftyanikov-2/neftyanikov-2-4.jpg';
+import neftyanikov5 from '../../shared/assets/images/neftyanikov-2/neftyanikov-2-5.jpg';
 
 export const API_KEY = '34f6d796-768a-4d03-9aaf-ac0a3f7336b3';
 
@@ -65,7 +70,13 @@ export const locations: TLocations[] = [
     coords: [60.931967, 76.570392],
     format: '10*30',
     address: 'ул. Нефтяников, д.2',
-    photos: [img1],
+    photos: [
+      neftyanikov1,
+      neftyanikov2,
+      neftyanikov3,
+      neftyanikov4,
+      neftyanikov5,
+    ],
   },
   {
     id: 10,

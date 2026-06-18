@@ -4,7 +4,6 @@ import styles from './Map.module.scss';
 import { SectionTitle } from '../../shared';
 import iconLocation from '../../shared/assets/icons/location.svg';
 import { API_KEY, locations } from './data';
-import { renderToString } from 'react-dom/server';
 import Balloon from '../Balloon';
 import { TLocations } from './types';
 
@@ -43,7 +42,7 @@ const MapN = () => {
                     iconImageOffset: [-20, -40],
                   }}
                   onClick={() => setLocation(loc)}
-                  modules={['geoObject.addon.hint']} // обязательно для работы балуна и хинта
+                  modules={['geoObject.addon.hint']}
                 />
               );
             })}

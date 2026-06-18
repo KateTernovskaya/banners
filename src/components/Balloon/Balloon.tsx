@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import styles from './Balloon.module.scss';
-
 import type { BalloonProps } from './types';
 
 const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
-  const photo = photos[0];
+  const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
+
+  const openFullscreen = (index: number) => setFullscreenIndex(index);
+  const closeFullscreen = () => setFullscreenIndex(null);
 
   return (
     <div className={styles.container}>
+      {/* Шапка */}
       <div className={styles.info}>
         <div className={styles.address_block}>
           <div className={styles.address}>
@@ -94,12 +103,79 @@ const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
           <span>Формат: {format}</span>
         </div>
       </div>
+
+      {/* Карусель внутри балуна */}
       <div className={styles.image}>
-        <img src={photo} alt={address} />
+        <Swiper
+          modules={[Autoplay]}
+          slidesPerView={1}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          loop={photos.length > 1}
+          speed={800}
+          className={styles.carousel}
+          simulateTouch={true}
+          touchRatio={1}
+          resistanceRatio={0.85}
+        >
+          {photos.map((image, index) => (
+            <SwiperSlide key={index} className={styles.slide}>
+              <img
+                src={image}
+                alt={`${address} ${index + 1}`}
+                className={styles.slide_image}
+                onClick={() => openFullscreen(index)}
+                style={{ cursor: 'pointer' }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
+
       <button className={styles.button} onClick={() => console.log(address)}>
         Связаться
       </button>
+
+      {/* Полноэкранный оверлей через портал */}
+      {fullscreenIndex !== null &&
+        createPortal(
+          <div className={styles.fullscreenOverlay} onClick={closeFullscreen}>
+            <div
+              className={styles.fullscreenContent}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className={styles.fullscreenClose}
+                onClick={closeFullscreen}
+              >
+                ✕
+              </button>
+              <Swiper
+                initialSlide={fullscreenIndex}
+                modules={[Navigation, Pagination]}
+                navigation
+                pagination={{ clickable: true }}
+                slidesPerView={1}
+                loop={photos.length > 1}
+                className={styles.fullscreenSwiper}
+              >
+                {photos.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt=""
+                      className={styles.fullscreenImage}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 };
