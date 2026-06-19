@@ -1,3 +1,37 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/mixin";
+
 .container {
-  min-height: 10vh;
+  border-top: 2px dashed $primaryBg;
+  margin: 0 -15vh;
+  padding: 3vh 15vh;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 15%);
+  display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+}
+
+.title {
+  width: 30%;
+
+  @include font($accent, 600, 2, 18px, 28px)
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
+  .item {
+    display: flex;
+    gap: 0.5vw;
+  }
+
+  .accent, .button {
+    color: $accent;
+  }
+
+  .button {
+    cursor: pointer;
+  }
 }
