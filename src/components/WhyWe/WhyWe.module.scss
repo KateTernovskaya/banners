@@ -24,6 +24,7 @@
   margin-top: 5vh;
   overflow: hidden;
   position: relative;
+  height: 100px;
 }
 
 /* Маска по краям (опционально) */
@@ -65,7 +66,17 @@
   transition: opacity 0.2s;
 }
 
-.clients_brand:hover {
-  opacity: 1;
+.logoImage {
+  max-height: 45px;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: grayscale(0%) brightness(1.1);
+  }
 }
+
 
