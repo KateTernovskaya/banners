@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styles from './Balloon.module.scss';
 import type { BalloonProps } from './types';
+import { Link } from 'react-scroll';
 
 const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
   const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
@@ -128,16 +129,21 @@ const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
                 alt={`${address} ${index + 1}`}
                 className={styles.slide_image}
                 onClick={() => openFullscreen(index)}
-                style={{ cursor: 'pointer' }}
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-
-      <button className={styles.button} onClick={() => console.log(address)}>
+      <Link
+        className={styles.button}
+        to={'contacts'}
+        smooth={'easeInOutCubic'}
+        duration={500}
+        spy={true}
+        containerId="main"
+      >
         Связаться
-      </button>
+      </Link>
 
       {/* Полноэкранный оверлей через портал */}
       {fullscreenIndex !== null &&

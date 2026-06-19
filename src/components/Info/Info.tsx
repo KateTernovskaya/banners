@@ -99,6 +99,7 @@ const Info = (props: InfoProps) => {
               Гарантия сохранности на весь период
             </li>
           </ul>
+          <button className={styles.button}>Оставить заявку</button>
         </div>
         <Carousel />
       </div>
