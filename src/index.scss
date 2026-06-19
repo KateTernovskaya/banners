@@ -1,4 +1,5 @@
 @import './shared/styles/variables';
+@import "./shared/styles/mixin";
 
 /* Reset and base styles */
 *,
@@ -15,14 +16,14 @@ html {
   font-family: Manrope, sans-serif;
   font-style: normal;
 
+  @include font(black, 400, 1.5, 14px, 18px);
+
   body {
     position: relative;
     top: 0;
     left: 0;
 
     overflow: hidden;
-
-    background-color: var(--grey-0);
   }
 }
 

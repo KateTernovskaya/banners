@@ -8,8 +8,8 @@ export const itemsMenu = [
     href: 'map',
   },
   {
-    title: 'Цены',
-    href: 'cost',
+    title: 'Почему мы',
+    href: 'whyWe',
   },
   {
     title: 'Контакты',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { YMaps, Map, Placemark, ZoomControl } from '@pbe/react-yandex-maps';
+import { Map, Placemark, YMaps, ZoomControl } from '@pbe/react-yandex-maps';
 import styles from './Map.module.scss';
 import { SectionTitle } from '../../shared';
 import iconLocation from '../../shared/assets/icons/location.svg';

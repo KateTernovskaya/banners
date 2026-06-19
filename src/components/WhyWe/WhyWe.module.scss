@@ -1,0 +1,71 @@
+@import "../../shared/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  text-align: justify;
+}
+
+.title {
+  font-weight: 500;
+  color: $accent;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.slider_wrapper {
+  padding: 3vh 0;
+  margin-top: 5vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Маска по краям (опционально) */
+.slider_wrapper::before,
+.slider_wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+
+}
+
+.slider_wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #f8f9fa, transparent);
+}
+
+.slider_wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #f8f9fa, transparent);
+}
+
+.clients_swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+
+.clients_brand {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a2e;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.clients_brand:hover {
+  opacity: 1;
+}
+
