@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kateternovskaya.github.io/banners",
   "name": "banners",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +10,9 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "lint:css": "stylelint \"src/**/*.scss\"",
-    "lint:css:fix": "stylelint \"src/**/*.scss\" --fix"
+    "lint:css:fix": "stylelint \"src/**/*.scss\" --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.5",
@@ -50,6 +53,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
+    "gh-pages": "6.3.0",
     "prettier": "3.8.3",
     "stylelint": "17.12.0",
     "stylelint-config-standard-scss": "17.0.0",
