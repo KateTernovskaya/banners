@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
@@ -8,9 +8,13 @@ import 'swiper/css/pagination';
 import styles from './Balloon.module.scss';
 import type { BalloonProps } from './types';
 import { Link } from 'react-scroll';
+import 'swiper/css/navigation';
+import type { Swiper as SwiperType } from 'swiper';
 
 const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
   const [fullscreenIndex, setFullscreenIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0); // текущий индекс слайда
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const openFullscreen = (index: number) => setFullscreenIndex(index);
   const closeFullscreen = () => setFullscreenIndex(null);
@@ -108,12 +112,11 @@ const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
       {/* Карусель внутри балуна */}
       <div className={styles.image}>
         <Swiper
-          modules={[Autoplay]}
+          modules={[Autoplay, Navigation]}
           slidesPerView={1}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
           }}
           loop={photos.length > 1}
           speed={800}
@@ -121,6 +124,11 @@ const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
           simulateTouch={true}
           touchRatio={1}
           resistanceRatio={0.85}
+          navigation
+          onSlideChange={(swiper: SwiperType) =>
+            setActiveIndex(swiper.realIndex)
+          }
+          onSwiper={(swiper: SwiperType) => (swiperRef.current = swiper)}
         >
           {photos.map((image, index) => (
             <SwiperSlide key={index} className={styles.slide}>
@@ -133,6 +141,17 @@ const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <button
+          className={styles.fullscreenButton}
+          onClick={() => {
+            openFullscreen(activeIndex);
+          }}
+          aria-label="Открыть на весь экран"
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+          </svg>
+        </button>
       </div>
       <Link
         className={styles.button}

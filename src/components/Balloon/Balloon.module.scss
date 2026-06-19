@@ -1,6 +1,7 @@
 @import "../../shared/styles/variables";
 
 .container {
+  height: 60vh;
   padding: 2vw;
   background: white;
   border-radius: 8px;
@@ -63,14 +64,47 @@
 .image {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 100%;
   overflow: hidden;
+}
+
+.fullscreenButton {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  background: rgb(0 0 0 / 50%);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s;
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background: rgb(0 0 0 / 70%);
+  }
+
+  svg {
+    fill: currentcolor;
+    display: block;
+  }
 }
 
 .carousel {
   width: 100%;
   height: 100%;
   border-radius: 6px;
+
+  :global {
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 24px;
+      height: 24px;
+      color: rgb(0 0 0 / 70%);
+    }
+  }
 }
 
 .slide {
@@ -84,6 +118,12 @@
   object-fit: cover;
   object-position: center;
   cursor: zoom-in;
+
+  transition: transform 0.3s, filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
 }
 
 .button {
