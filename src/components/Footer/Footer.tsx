@@ -31,7 +31,7 @@ const Footer = (props: FooterProps) => {
             className={styles.button}
             to={'contacts'}
             smooth={'easeInOutCubic'}
-            duration={500}
+            duration={1000}
             spy={true}
             containerId="main"
           >

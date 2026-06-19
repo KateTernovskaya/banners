@@ -18,7 +18,7 @@ const Menu = ({ onClick }: MenuProps) => {
               onClick={onClick}
               to={item.href}
               smooth={'easeInOutCubic'}
-              duration={500}
+              duration={1000}
               spy={true}
               containerId="main"
             >

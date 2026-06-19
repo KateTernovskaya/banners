@@ -138,7 +138,7 @@ const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
         className={styles.button}
         to={'contacts'}
         smooth={'easeInOutCubic'}
-        duration={500}
+        duration={1000}
         spy={true}
         containerId="main"
       >

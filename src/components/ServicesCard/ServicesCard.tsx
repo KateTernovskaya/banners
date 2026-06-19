@@ -2,7 +2,12 @@ import React from 'react';
 import styles from './ServicesCard.module.scss';
 import type { ServicesCardProps } from './types';
 
-const ServicesCard = ({ svg, name, description }: ServicesCardProps) => {
+const ServicesCard = ({
+  svg,
+  name,
+  description,
+  onClick,
+}: ServicesCardProps) => {
   const Icon = svg;
 
   return (
@@ -14,7 +19,9 @@ const ServicesCard = ({ svg, name, description }: ServicesCardProps) => {
 
       <p>{description}</p>
 
-      <button className={styles.button}>Подробнее</button>
+      <button className={styles.button} onClick={onClick}>
+        Подробнее
+      </button>
     </div>
   );
 };

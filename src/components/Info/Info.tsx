@@ -3,6 +3,7 @@ import styles from './Info.module.scss';
 import type { InfoProps } from './types';
 import { SectionTitle } from '../../shared';
 import Carousel from '../Carousel';
+import { Link } from 'react-scroll';
 
 const Info = (props: InfoProps) => {
   return (
@@ -99,7 +100,16 @@ const Info = (props: InfoProps) => {
               Гарантия сохранности на весь период
             </li>
           </ul>
-          <button className={styles.button}>Оставить заявку</button>
+          <Link
+            className={styles.button}
+            to={'contacts'}
+            smooth={'easeInOutCubic'}
+            duration={1000}
+            spy={true}
+            containerId="main"
+          >
+            Оставить заявку
+          </Link>
         </div>
         <Carousel />
       </div>
