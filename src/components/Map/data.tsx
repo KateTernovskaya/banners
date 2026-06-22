@@ -12,8 +12,8 @@ import let60_3 from '../../shared/assets/images/60let/60let-3.jpg';
 import severnaya11_1 from '../../shared/assets/images/severnaya11/severnaya11-1.jpg';
 import severnaya11_2 from '../../shared/assets/images/severnaya11/severnaya11-2.jpg';
 
-import chapaeva15_1 from '../../shared/assets/images/chapaeva15/chapaeva15-1.jpg';
-import chapaeva15_2 from '../../shared/assets/images/chapaeva15/chapaeva15-2.jpg';
+import chapaeva15_2_1 from '../../shared/assets/images/chapaeva15-2/chapaeva15-2-1.jpg';
+import chapaeva15_2_2 from '../../shared/assets/images/chapaeva15-2/chapaeva15-2-2.jpg';
 
 import severnaya72_1 from '../../shared/assets/images/severnaya72/severnaya72-1.jpg';
 import severnaya72_2 from '../../shared/assets/images/severnaya72/severnaya72-2.jpg';
@@ -49,6 +49,38 @@ import geroev18_1 from '../../shared/assets/images/geroev18/geroev18-1.jpg';
 import geroev18_2 from '../../shared/assets/images/geroev18/geroev18-2.jpg';
 import geroev18_3 from '../../shared/assets/images/geroev18/geroev18-3.jpg';
 
+import chapaeva15_1_1 from '../../shared/assets/images/chapaeva15-1/chapaeva15-1-1.jpg';
+import chapaeva15_1_2 from '../../shared/assets/images/chapaeva15-1/chapaeva15-1-2.jpg';
+import chapaeva15_1_3 from '../../shared/assets/images/chapaeva15-1/chapaeva15-1-3.jpg';
+import chapaeva15_1_4 from '../../shared/assets/images/chapaeva15-1/chapaeva15-1-4.jpg';
+import chapaeva15_1_5 from '../../shared/assets/images/chapaeva15-1/chapaeva15-1-5.jpg';
+
+import internacionalnaya13_1 from '../../shared/assets/images/internacionalnaya13/internacionalnaya13-1.jpg';
+import internacionalnaya13_2 from '../../shared/assets/images/internacionalnaya13/internacionalnaya13-2.jpg';
+import internacionalnaya13_3 from '../../shared/assets/images/internacionalnaya13/internacionalnaya13-3.jpg';
+import internacionalnaya13_4 from '../../shared/assets/images/internacionalnaya13/internacionalnaya13-4.jpg';
+
+import mira60_1_1 from '../../shared/assets/images/mira60-1/mira60-1-1.jpg';
+import mira60_1_2 from '../../shared/assets/images/mira60-1/mira60-1-2.jpg';
+import mira60_1_3 from '../../shared/assets/images/mira60-1/mira60-1-3.jpg';
+import mira60_1_4 from '../../shared/assets/images/mira60-1/mira60-1-4.jpg';
+import mira60_1_5 from '../../shared/assets/images/mira60-1/mira60-1-5.jpg';
+import mira60_1_6 from '../../shared/assets/images/mira60-1/mira60-1-6.jpg';
+
+import mira60_2_1 from '../../shared/assets/images/mira60-2/mira60-2-1.jpg';
+import mira60_2_2 from '../../shared/assets/images/mira60-2/mira60-2-2.jpg';
+import mira60_2_3 from '../../shared/assets/images/mira60-2/mira60-2-3.jpg';
+import mira60_2_4 from '../../shared/assets/images/mira60-2/mira60-2-4.jpg';
+import mira60_2_5 from '../../shared/assets/images/mira60-2/mira60-2-5.jpg';
+import mira60_2_6 from '../../shared/assets/images/mira60-2/mira60-2-6.jpg';
+
+import sportivnaya13_1 from '../../shared/assets/images/sportivnaya13/sportivnaya13-1.jpg';
+import sportivnaya13_2 from '../../shared/assets/images/sportivnaya13/sportivnaya13-2.jpg';
+
+import severnaya9_1 from '../../shared/assets/images/severnaya9/severnaya9-1.jpg';
+import severnaya9_2 from '../../shared/assets/images/severnaya9/severnaya9-2.jpg';
+import severnaya9_3 from '../../shared/assets/images/severnaya9/severnaya9-3.jpg';
+
 export const API_KEY = '34f6d796-768a-4d03-9aaf-ac0a3f7336b3';
 
 export const locations: TLocations[] = [
@@ -71,7 +103,13 @@ export const locations: TLocations[] = [
     coords: [60.935555, 76.592427],
     format: '10*30',
     address: 'ул. Чапаева, д.15/1',
-    photos: [chapaeva15_1, chapaeva15_2],
+    photos: [
+      chapaeva15_1_1,
+      chapaeva15_1_2,
+      chapaeva15_1_3,
+      chapaeva15_1_4,
+      chapaeva15_1_5,
+    ],
   },
   {
     id: 4,
@@ -138,6 +176,67 @@ export const locations: TLocations[] = [
     coords: [60.930384, 76.621416],
     format: '10*20',
     address: 'ул. Героев Самотлора, д.18',
-    photos: [geroev18_1, geroev18_1, geroev18_1],
+    photos: [geroev18_1, geroev18_2, geroev18_3],
+  },
+  {
+    id: 12,
+    coords: [60.936132, 76.593065],
+    format: '10*30',
+    address: 'ул. Чапаева, д. 15/2',
+    photos: [chapaeva15_2_1, chapaeva15_2_2],
+  },
+  {
+    id: 13,
+    coords: [60.954615, 76.578575],
+    format: '10*30',
+    address: 'ул. Интернациональная,  д. 13',
+    photos: [
+      internacionalnaya13_1,
+      internacionalnaya13_2,
+      internacionalnaya13_3,
+      internacionalnaya13_4,
+    ],
+  },
+  {
+    id: 14,
+    coords: [60.939506, 76.590622],
+    format: '10*30',
+    address: 'ул. Мира 60 корпус 1',
+    photos: [
+      mira60_1_1,
+      mira60_1_2,
+      mira60_1_3,
+      mira60_1_4,
+      mira60_1_5,
+      mira60_1_6,
+    ],
+  },
+  {
+    id: 15,
+    coords: [60.93886, 76.593128],
+    format: '10*30',
+    address: 'ул. Мира 60 корпус 2',
+    photos: [
+      mira60_2_1,
+      mira60_2_2,
+      mira60_2_3,
+      mira60_2_4,
+      mira60_2_5,
+      mira60_2_6,
+    ],
+  },
+  {
+    id: 16,
+    coords: [60.942465, 76.594269],
+    format: '10*30',
+    address: 'ул. Спортивная 13 корпус 1',
+    photos: [sportivnaya13_1, sportivnaya13_2],
+  },
+  {
+    id: 17,
+    coords: [60.953951, 76.571299],
+    format: '10*30',
+    address: 'ул. Северная, 9',
+    photos: [severnaya9_1, severnaya9_1, severnaya9_1],
   },
 ];

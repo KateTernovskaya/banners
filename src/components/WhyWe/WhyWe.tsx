@@ -11,7 +11,7 @@ import ozon from '../../shared/assets/images/brands/OZON_2019.svg.png';
 import yam from '../../shared/assets/images/brands/Yandex_Market_cropp_logo.svg.png';
 import sberM from '../../shared/assets/images/brands/Sbermarket_logo.png';
 import svetofor from '../../shared/assets/images/brands/Svetofor-logo.png';
-import maria from '../../shared/assets/images/brands/Maria-ra-logo.png';
+import wb from '../../shared/assets/images/brands/wb.jpg';
 import samokat from '../../shared/assets/images/brands/samokat-horizontal-logo.png';
 import macdonalds from '../../shared/assets/images/brands/logo-macdonalds.png';
 import rostics from '../../shared/assets/images/brands/rostics.png';
@@ -56,7 +56,7 @@ const brands = [
   { id: 5, name: 'Яндекс Маркет', src: yam },
   { id: 6, name: 'СберМаркет', src: sberM },
   { id: 7, name: 'Светофор', src: svetofor },
-  { id: 8, name: 'Мария-Ра', src: maria },
+  { id: 8, name: 'Вайлберис', src: wb },
   { id: 9, name: 'Самокат', src: samokat },
   { id: 10, name: 'Вкусно — и точка', src: macdonalds },
   { id: 11, name: 'KFC (Ростикс)', src: rostics },
