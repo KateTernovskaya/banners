@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Header.module.scss';
 import { animateScroll as scroll } from 'react-scroll';
 import Menu from '../Menu';
+import MobileMenu from '../MobileMenu';
 
 const Header: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const Header: React.FC = () => {
         <nav className={styles.menu_wrapper}>
           <Menu />
         </nav>
+        <MobileMenu />
       </div>
     </header>
   );

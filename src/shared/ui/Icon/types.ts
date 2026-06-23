@@ -1,7 +1,7 @@
 export type IconProps = {
   iconId: string;
-  width?: string;
-  height?: string;
+  className?: string;
+  width?: number;
+  height?: number;
   viewBox?: string;
-  fill?: string;
 };

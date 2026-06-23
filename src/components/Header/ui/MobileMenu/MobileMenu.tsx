@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Menu from '../Menu';
 import styles from './MobileMenu.module.scss';
+import { Icon } from '../../../../shared';
+import { createPortal } from 'react-dom';
 
 const MobileMenu: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   useEffect(() => {
-    const body = document.querySelector('body');
+    const body = document.getElementById('main');
     if (!body) return;
 
     if (menuIsOpen) {
       body.style.overflow = 'hidden';
+      body.style.scrollbarGutter = 'stable';
       return;
     }
-    body.style.overflow = '';
+    body.style.overflow = 'scroll';
   }, [menuIsOpen]);
 
   const onBurgerBtnClick = () => {
@@ -24,22 +27,24 @@ const MobileMenu: React.FC = () => {
     setMenuIsOpen(false);
   };
 
-  return (
-    <nav className={styles.mobileMenu}>
-      <button
-        className={`${styles.burgerButton} ${menuIsOpen ? styles.open : ''}`}
-        onClick={onBurgerBtnClick}
-      >
-        <span></span>
+  return createPortal(
+    <nav className={styles.mobile_menu}>
+      <button onClick={onBurgerBtnClick} className={styles.button}>
+        {menuIsOpen ? (
+          <Icon className={styles.close_button} iconId="close" />
+        ) : (
+          <Icon iconId="burger" width={36} height={36} />
+        )}
       </button>
 
       <div
-        className={`${styles.mobileMenuPopup} ${menuIsOpen ? styles.open : ''}`}
+        className={`${styles.mobile_popup} ${menuIsOpen ? styles.open : ''}`}
         onClick={closeMenu}
       >
         <Menu onClick={closeMenu} />
       </div>
-    </nav>
+    </nav>,
+    document.body
   );
 };
 
