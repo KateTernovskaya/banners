@@ -14,3 +14,9 @@
   height: 80vh;
   object-fit: cover;
 }
+
+@media (width <= 768px) {
+  .container {
+    display: none;
+  }
+}

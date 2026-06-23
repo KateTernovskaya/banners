@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+
+.button_link {
+  width: 50%;
+  background-color: $accent;
+  color: $white;
+  padding: 1.3vh;
+  border-radius: 4px;
+  transition: all ease 0.3s;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    background-color: $secondaryBg;
+  }
+}

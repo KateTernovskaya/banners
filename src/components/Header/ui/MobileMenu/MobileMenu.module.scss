@@ -4,17 +4,19 @@
 .mobile_menu {
   position: absolute;
   top: 20px;
-  right: 15vh;
+  right: 15vw;
   z-index: 1001;
 
   display: none;
 
   @media (width <= 768px) {
+    top:10px;
     display: block;
+    right: 5vw;
   }
 }
 
-button {
+.button {
   background: none;
   border: none;
   cursor: pointer;

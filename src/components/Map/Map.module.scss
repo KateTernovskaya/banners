@@ -26,10 +26,16 @@
   box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
 }
 
-.baloon{
- position: absolute;
+.baloon {
+  position: absolute;
   top: 20px;
   left: 20px;
   width: 360px;
   z-index: 100;
+}
+
+@media (width <= 768px) {
+  .baloon {
+    width: 300px;
+  }
 }

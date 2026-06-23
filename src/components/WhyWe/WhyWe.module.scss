@@ -27,29 +27,6 @@
   height: 100px;
 }
 
-/* Маска по краям (опционально) */
-.slider_wrapper::before,
-.slider_wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-border-radius: 6px;
-}
-
-.slider_wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, #f8f9fa, transparent);
-}
-
-.slider_wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, #f8f9fa, transparent);
-}
-
 .clients_swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
