@@ -1,19 +1,9 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { animateScroll as scroll, Link } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import Menu from '../Menu';
 
 const Header: React.FC = () => {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 768;
-
-  React.useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => window.removeEventListener('resize', handleWindowResize);
-  }, []);
-
   return (
     <header className={styles.container}>
       <div className={styles.wrapper}>
@@ -32,7 +22,6 @@ const Header: React.FC = () => {
         <nav className={styles.menu_wrapper}>
           <Menu />
         </nav>
-        {/*{width < breakpoint ? <MobileMenu /> : <DesktopMenu />}*/}
       </div>
     </header>
   );
