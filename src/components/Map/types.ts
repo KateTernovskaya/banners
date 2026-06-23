@@ -1,5 +1,5 @@
 export type TLocations = {
-  id: number;
+  id: string;
   coords: number[];
   format: string;
   address: string;
