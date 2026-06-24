@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/banners/static/css/main.95175da2.css",
-    "main.js": "/banners/static/js/main.584fb865.js",
+    "main.css": "/banners/static/css/main.94d1ff8b.css",
+    "main.js": "/banners/static/js/main.f2c484db.js",
     "static/media/chapaeva15-1-1.jpg": "/banners/static/media/chapaeva15-1-1.d9591f3aeb7359be2ed9.jpg",
     "static/media/lenina17-1.jpg": "/banners/static/media/lenina17-1.366b2899223006ea26ce.jpg",
     "static/media/lenina17-3.jpg": "/banners/static/media/lenina17-3.a6630706516404a4af1d.jpg",
@@ -127,11 +127,11 @@
     "static/media/logo-sber.png": "/banners/static/media/logo-sber.670013e06ba98f32ddbe.png",
     "static/media/location.svg": "/banners/static/media/location.29ac08657accf778c84c4a2cd2a14cdc.svg",
     "index.html": "/banners/index.html",
-    "main.95175da2.css.map": "/banners/static/css/main.95175da2.css.map",
-    "main.584fb865.js.map": "/banners/static/js/main.584fb865.js.map"
+    "main.94d1ff8b.css.map": "/banners/static/css/main.94d1ff8b.css.map",
+    "main.f2c484db.js.map": "/banners/static/js/main.f2c484db.js.map"
   },
   "entrypoints": [
-    "static/css/main.95175da2.css",
-    "static/js/main.584fb865.js"
+    "static/css/main.94d1ff8b.css",
+    "static/js/main.f2c484db.js"
   ]
 }
