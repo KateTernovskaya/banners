@@ -15,8 +15,8 @@
   object-fit: cover;
 }
 
-@media (width <= 768px) {
+@media (width <= 568px) {
   .container {
-    display: none;
+    width: 100%;
   }
 }

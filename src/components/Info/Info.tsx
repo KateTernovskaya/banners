@@ -5,6 +5,16 @@ import Carousel from '../Carousel';
 import Button from '../../shared/ui/Button';
 
 const Info = () => {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 568;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.text_wrapper}>
@@ -12,6 +22,7 @@ const Info = () => {
           title="Пока конкуренты тратят бюджет на баннеры, ваш бренд занимает целый
         фасад — и его видит весь город"
         />
+        {width < breakpoint ? <Carousel /> : null}
         <p>
           Малые форматы теряются в городском шуме. Аудитория пролистывает
           диджитал. Телевидение дорого и размывает фокус.
@@ -44,7 +55,7 @@ const Info = () => {
         </ul>
         <Button isLink />
       </div>
-      <Carousel />
+      {width < breakpoint ? null : <Carousel />}
     </div>
   );
 };

@@ -32,7 +32,11 @@
   }
 }
 
-@media (width <= 768px) {
+@media (width <= 568px) {
+  .wrapper{
+    flex-direction: column;
+  }
+
   .text_wrapper {
     width: 100%;
 

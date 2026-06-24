@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Footer.module.scss';
 import { Link } from 'react-scroll';
 import Logo from '../Logo';
+import Button from '../../shared/ui/Button';
 
 const Footer = () => {
   return (
@@ -29,16 +30,7 @@ const Footer = () => {
           <span>09.00ч - 18.00ч</span>
         </li>
         <li className={styles.item}>
-          <Link
-            className={styles.button}
-            to={'contacts'}
-            smooth={'easeInOutCubic'}
-            duration={1000}
-            spy={true}
-            containerId="main"
-          >
-            Оставить заявку
-          </Link>
+          <Button isLink />
         </li>
       </ul>
     </div>

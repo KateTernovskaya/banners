@@ -52,7 +52,7 @@
 
 .social {
   position: relative;
-  margin: 50px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -69,15 +69,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
-  svg {
-    width: 28px;
-    height: 28px;
-
-    path {
-      fill: white;
-    }
-  }
 
   &:hover {
     background-color: $secondaryBg;
@@ -114,4 +105,16 @@
   color: red;
   height: 18px;
   text-align: center;
+}
+
+@media (width <= 768px) {
+  .social {
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .social_item {
+    width: 46px;
+    height: 46px;
+  }
 }
