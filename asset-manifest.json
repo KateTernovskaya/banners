@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/banners/static/css/main.f3bc98bf.css",
-    "main.js": "/banners/static/js/main.ed9589c9.js",
+    "main.css": "/banners/static/css/main.95175da2.css",
+    "main.js": "/banners/static/js/main.584fb865.js",
     "static/media/chapaeva15-1-1.jpg": "/banners/static/media/chapaeva15-1-1.d9591f3aeb7359be2ed9.jpg",
     "static/media/lenina17-1.jpg": "/banners/static/media/lenina17-1.366b2899223006ea26ce.jpg",
     "static/media/lenina17-3.jpg": "/banners/static/media/lenina17-3.a6630706516404a4af1d.jpg",
@@ -116,6 +116,7 @@
     "static/media/Samsung_old_logo_before_year_2015.png": "/banners/static/media/Samsung_old_logo_before_year_2015.8080505f9a971ffdb7f9.png",
     "static/media/magnitCosmetic.jpg": "/banners/static/media/magnitCosmetic.ddca65e6eb80a714f244.jpg",
     "static/media/MTS_logo_2015.svg.png": "/banners/static/media/MTS_logo_2015.svg.9104402f68f7f624e791.png",
+    "static/media/icons-sprite.svg": "/banners/static/media/icons-sprite.2ecbe4c68abe0847323337803a1bfaee.svg",
     "static/media/etagi.jpg": "/banners/static/media/etagi.f05ef88b88141d477bcb.jpg",
     "static/media/wb.jpg": "/banners/static/media/wb.7be93c3d05d94bbe9860.jpg",
     "static/media/podrujka.png": "/banners/static/media/podrujka.6bae9fe350682b7d4022.png",
@@ -124,14 +125,13 @@
     "static/media/logo-shatura.jpg": "/banners/static/media/logo-shatura.39f0fec1488a5af75103.jpg",
     "static/media/Sbermarket_logo.png": "/banners/static/media/Sbermarket_logo.752552ca89c2eceaa402.png",
     "static/media/logo-sber.png": "/banners/static/media/logo-sber.670013e06ba98f32ddbe.png",
-    "static/media/icons-sprite.svg": "/banners/static/media/icons-sprite.3eac4ccada844894e218078f45834837.svg",
     "static/media/location.svg": "/banners/static/media/location.29ac08657accf778c84c4a2cd2a14cdc.svg",
     "index.html": "/banners/index.html",
-    "main.f3bc98bf.css.map": "/banners/static/css/main.f3bc98bf.css.map",
-    "main.ed9589c9.js.map": "/banners/static/js/main.ed9589c9.js.map"
+    "main.95175da2.css.map": "/banners/static/css/main.95175da2.css.map",
+    "main.584fb865.js.map": "/banners/static/js/main.584fb865.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3bc98bf.css",
-    "static/js/main.ed9589c9.js"
+    "static/css/main.95175da2.css",
+    "static/js/main.584fb865.js"
   ]
 }
