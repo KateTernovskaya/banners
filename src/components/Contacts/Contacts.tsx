@@ -1,10 +1,8 @@
 import React from 'react';
 import styles from './Contacts.module.scss';
-import type { ContactsProps } from './types';
 import { SectionTitle } from '../../shared';
 
-const Contacts = (props: ContactsProps) => {
-  // Если props не используются, можно их убрать или оставить
+const Contacts = () => {
   return (
     <div id="contacts">
       <SectionTitle title="Контакты" />

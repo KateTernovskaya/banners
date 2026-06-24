@@ -11,8 +11,15 @@
   margin-top: auto;
   display: flex;
   justify-content: center;
+  text-align: center;
 
   &:hover {
     background-color: $secondaryBg;
+  }
+}
+
+@media (width <= 768px) {
+  .button_link {
+    width: 100%;
   }
 }

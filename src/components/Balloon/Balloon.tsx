@@ -21,7 +21,6 @@ const Balloon = ({ format, address, photos, onClose }: BalloonProps) => {
 
   return (
     <div className={styles.container}>
-      {/* Шапка */}
       <div className={styles.info}>
         <div className={styles.address_block}>
           <div className={styles.address}>

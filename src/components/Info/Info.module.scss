@@ -35,5 +35,9 @@
 @media (width <= 768px) {
   .text_wrapper {
     width: 100%;
+
+    a {
+      align-self: center
+    }
   }
 }

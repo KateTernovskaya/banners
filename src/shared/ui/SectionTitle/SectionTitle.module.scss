@@ -2,7 +2,7 @@
 @import "../../styles/mixin";
 
 .title {
-  @include font($accent, 600, 1.5, 20px, 30px);
+  @include font($accent, 600, 1.5, 20, 30);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;

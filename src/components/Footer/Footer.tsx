@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import type { FooterProps } from './types';
 import { Link } from 'react-scroll';
 
-const Footer = (props: FooterProps) => {
+const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>

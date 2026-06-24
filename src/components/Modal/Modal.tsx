@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import styles from './Modal.module.scss';
 import { ModalProps } from './types';
-import { Link } from 'react-scroll';
+import Button from '../../shared/ui/Button';
+import { createPortal } from 'react-dom';
 
 const Modal = ({ isOpen, onClose, title, content, icon: Icon }: ModalProps) => {
-  // Закрытие по Escape
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -21,10 +21,8 @@ const Modal = ({ isOpen, onClose, title, content, icon: Icon }: ModalProps) => {
 
   if (!isOpen) return null;
 
-  // Рендеринг контента – разбиваем строки на параграфы, списки и подзаголовки
   const renderContent = () => {
     return content.map((line, idx) => {
-      // Если строка начинается с маркеров – рендерим как пункт списка
       if (
         line.startsWith('•') ||
         line.startsWith('—') ||
@@ -43,7 +41,6 @@ const Modal = ({ isOpen, onClose, title, content, icon: Icon }: ModalProps) => {
           </li>
         );
       }
-      // Если строка заканчивается на «:» – подзаголовок
       if (line.endsWith(':')) {
         return (
           <h4 key={idx} className={styles.subtitle}>
@@ -51,7 +48,6 @@ const Modal = ({ isOpen, onClose, title, content, icon: Icon }: ModalProps) => {
           </h4>
         );
       }
-      // Обычный абзац
       return (
         <p key={idx} className={styles.paragraph}>
           {line}
@@ -60,7 +56,7 @@ const Modal = ({ isOpen, onClose, title, content, icon: Icon }: ModalProps) => {
     });
   };
 
-  return (
+  return createPortal(
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>
@@ -74,21 +70,11 @@ const Modal = ({ isOpen, onClose, title, content, icon: Icon }: ModalProps) => {
           <h2 className={styles.title}>{title}</h2>
 
           <div className={styles.textContent}>{renderContent()}</div>
-
-          <Link
-            className={styles.actionButton}
-            onClick={() => onClose}
-            to={'contacts'}
-            smooth={'easeInOutCubic'}
-            duration={1000}
-            spy={true}
-            containerId="main"
-          >
-            Оставить заявку
-          </Link>
+          <Button isLink />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

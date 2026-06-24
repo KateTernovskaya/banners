@@ -14,7 +14,7 @@ const ServicesCard = ({
     <div className={styles.container}>
       <div className={styles.title}>
         <Icon />
-        <h3>{name}</h3>
+        <h3 className={styles.text}>{name}</h3>
       </div>
 
       <p>{description}</p>

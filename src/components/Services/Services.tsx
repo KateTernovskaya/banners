@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Services.module.scss';
-import type { ServicesProps } from './types';
 import { SectionTitle } from '../../shared';
 import ServicesCard from '../ServicesCard';
 import Modal from '../Modal';
 import { data } from './data';
 
-const Services = (props: ServicesProps) => {
+const Services = () => {
   const [selectedService, setSelectedService] = useState<
     (typeof data)[0] | null
   >(null);
@@ -30,7 +29,6 @@ const Services = (props: ServicesProps) => {
         ))}
       </div>
 
-      {/* Модальное окно */}
       {selectedService && (
         <Modal
           isOpen={!!selectedService}

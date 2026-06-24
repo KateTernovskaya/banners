@@ -12,23 +12,21 @@
   justify-content: center;
   align-items: center;
   z-index: 1200;
-  animation: fadeIn 0.2s ease;
+  animation: fade-in 0.2s ease;
   padding: 20px;
 }
 
 .modal {
   background: #fff;
   border-radius: 24px;
-  max-width: 700px;
-  width: 100%;
-  max-height: 90vh;
+  width: 80vw;
+  height: 90vh;
   padding: 40px 35px 30px;
   position: relative;
   box-shadow: 0 20px 60px rgb(0 0 0 / 30%);
-  animation: slideUp 0.3s ease;
+  animation: slide-up 0.3s ease;
   display: flex;
   flex-direction: column;
-
 }
 
 .closeButton {
@@ -64,7 +62,7 @@
     width: 56px;
     height: 56px;
 
-    path{
+    path {
       fill: $accent;
 
     }
@@ -85,7 +83,6 @@
   padding-right: 8px;
   margin-bottom: 20px;
 
-  /* Стили для элементов внутри */
   .paragraph {
     font-size: 15px;
     line-height: 1.6;
@@ -140,24 +137,32 @@
   }
 }
 
-.actionButton {
-  width: 50%;
-  background-color: $accent;
-  color: $white;
-  padding: 1.3vh;
-  border-radius: 4px;
-  transition: all ease 0.3s;
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
+@media (width <= 768px) {
+  .modal {
+    border-radius: 18px;
+    padding: 3vh;
+  }
 
-  &:hover {
-    background-color: $secondaryBg;
+  .closeButton {
+    font-size: 24px;
+  }
+
+  .iconWrapper {
+    margin-bottom: 8px;
+
+    svg {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 8px;
   }
 }
 
-// Анимации
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -167,7 +172,7 @@
   }
 }
 
-@keyframes slideUp {
+@keyframes slide-up {
   from {
     transform: translateY(30px);
     opacity: 0;
@@ -178,3 +183,4 @@
     opacity: 1;
   }
 }
+

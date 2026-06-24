@@ -44,7 +44,6 @@
   right: 0;
   z-index: 1000;
   backdrop-filter: blur(5px);
-  color: white;
 
   &.open {
     transform: translateY(0);
@@ -54,9 +53,5 @@
     display: flex;
     flex-direction: column;
     gap: 3vh;
-
-    li a:hover {
-      border-bottom-color: white;
-    }
   }
 }

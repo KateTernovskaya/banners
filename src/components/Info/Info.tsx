@@ -1,12 +1,10 @@
 import React from 'react';
 import styles from './Info.module.scss';
-import type { InfoProps } from './types';
 import { Icon, SectionTitle } from '../../shared';
 import Carousel from '../Carousel';
-import { Link } from 'react-scroll';
 import Button from '../../shared/ui/Button';
 
-const Info = (props: InfoProps) => {
+const Info = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.text_wrapper}>
