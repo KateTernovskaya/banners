@@ -26,7 +26,7 @@
   color: grey;
 
   &:focus-within {
-      color: $secondaryBg;
+    color: $secondaryBg;
   }
 }
 
@@ -42,6 +42,12 @@
   &:focus-visible, &:focus {
     border-bottom: 2px solid $secondaryBg;
   }
+}
+
+
+.requared {
+  color: red;
+  margin-left: 4px;
 }
 
 .social {
@@ -79,18 +85,33 @@
   }
 }
 
-.button {
-  width: 50%;
-  background-color: $accent;
-  color: $white;
-  padding: 1.3vh;
-  border-radius: 4px;
-  transition: all ease 0.3s;
-  margin-top: auto;
+.icon {
+  width: 28px;
+  height: 28px;
+  color: white;
 
-  &:hover {
-    background-color: $secondaryBg;
+  &_telegram {
+    width: 28px;
+    height: 28px;
+    color: white;
+    transform: rotate(180deg) scaleX(-1);
   }
 }
 
+.info {
+  height: 18px;
+  color: $accent;
+  text-align: center;
+}
 
+.sucsess {
+  color: green;
+  height: 18px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  height: 18px;
+  text-align: center;
+}

@@ -1,7 +1,6 @@
 @import "../../styles/variables";
 
-
-.button_link {
+.button_link, .button {
   width: 50%;
   background-color: $accent;
   color: $white;
@@ -9,13 +8,24 @@
   border-radius: 4px;
   transition: all ease 0.3s;
   margin-top: auto;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 
   &:hover {
     background-color: $secondaryBg;
   }
+}
+
+.button:disabled {
+  opacity: 0.5;
+  filter: grayscale(50%);
+  cursor: default;
+
+  pointer-events: none;
+}
+
+.button_link {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 @media (width <= 768px) {

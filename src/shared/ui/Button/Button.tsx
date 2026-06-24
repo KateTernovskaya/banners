@@ -3,7 +3,13 @@ import styles from './Button.module.scss';
 import type { ButtonProps } from './types';
 import { Link } from 'react-scroll';
 
-const Button = ({ isLink = false }: ButtonProps) => {
+const Button = ({
+  isLink = false,
+  onClick,
+  type = 'button',
+  disabled = false,
+  text,
+}: ButtonProps) => {
   return isLink ? (
     <Link
       className={styles.button_link}
@@ -16,7 +22,14 @@ const Button = ({ isLink = false }: ButtonProps) => {
       Оставить заявку
     </Link>
   ) : (
-    <div>"Button"</div>
+    <button
+      className={styles.button}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+    >
+      {text}
+    </button>
   );
 };
 

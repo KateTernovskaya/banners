@@ -107,7 +107,7 @@ table {
 .main {
   height: auto;
   width: 100%;
-  margin: 30px 0;
+  margin: 10px 0;
   overflow-y: scroll;
   padding: 8vh 15vh 0;
   display: flex;
@@ -117,7 +117,6 @@ table {
 
 @media (width <= 768px) {
   .app {
-    grid-template-rows: 60px 1fr;
     height: 100dvh;
   }
 

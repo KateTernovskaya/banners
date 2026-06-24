@@ -8,12 +8,13 @@
   display: flex;
   justify-content: space-between;
   gap: 5vw;
+  align-items: center;
 }
 
 .title {
-  width: 30%;
+  width: 60%;
 
-  @include font($accent, 600, 2, 16, 28)
+  @include font($accent, 600, 2, 16, 18)
 }
 
 .list {
